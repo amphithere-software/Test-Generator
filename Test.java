@@ -6,6 +6,7 @@ public class Test {
 
 	String author[] = new String[26];
 	String work[] = new String[26];
+	boolean tag = false;
 
 	Test() {
 
@@ -69,25 +70,69 @@ public class Test {
 
 		Test test = new Test();
 
-		test.Start();
+		while (true) {
+			test.tag = false;
+			test.clearConsole();
+			System.out.println("1. Test version 1\n2. Test version 2\n3. Exit");
+			System.out.print("\nChoice: ");
+			String s = test.in.nextLine();
+			switch (s) {
 
-	}
+			case "1":
+				test.Start1();
+				s = "";
+				break;
+			case "2":
+				test.Start2();
+				s = "";
+				break;
+			case "3":
+				System.exit(0);
+				break;
+			default:
+				break;
 
-	void Start() {
-
-		for (int i = 0; i < author.length; i++) {
-			
-			clearConsole();
-
-			System.out.println(author[i] + "\n");
-
-			Shuffle(i);
+			}
 
 		}
 
 	}
 
-	int Shuffle(int index) {
+	void Start1() {
+
+		for (int i = 0; i < author.length; i++) {
+
+			if (tag)
+				break;
+
+			clearConsole();
+
+			System.out.println(author[i] + "\n");
+
+			Shuffle1(i);
+
+		}
+
+	}
+
+	void Start2() {
+
+		for (int i = 0; i < work.length; i++) {
+
+			if (tag)
+				break;
+
+			clearConsole();
+
+			System.out.println(work[i] + "\n");
+
+			Shuffle2(i);
+
+		}
+
+	}
+
+	int Shuffle1(int index) {
 
 		int num1 = 0, num2 = 0, num3 = 0;
 
@@ -142,14 +187,24 @@ public class Test {
 			System.out.println("\t4. " + work[index]);
 
 		}
+		System.out.println("\n\t5. Skip");
+		System.out.println("\t6. Exit");
 
-		System.out.print("\n\n");
+		System.out.print("\n");
 
 		System.out.print("Choice: ");
 
 		while (c != placement + 1) {
 
 			choice = in.nextLine();
+
+			if (choice.equalsIgnoreCase("5"))
+				break;
+			if (choice.equalsIgnoreCase("6")) {
+				tag = true;
+				break;
+			}
+
 			try {
 				c = Integer.parseInt(choice);
 			} catch (Exception e) {
@@ -165,7 +220,94 @@ public class Test {
 
 	}
 
-	public final static void clearConsole() {
+	int Shuffle2(int index) {
+
+		int num1 = 0, num2 = 0, num3 = 0;
+
+		int placement;
+		String choice = "";
+		int c = 5;
+
+		placement = (int) (Math.random() * 4);
+
+		do {
+
+			num1 = (int) (Math.random() * 26);
+
+		} while (author[num1].equals(author[index]));
+
+		do {
+
+			num2 = (int) (Math.random() * 26);
+
+		} while (num2 == num1 || author[num2].equals(author[index]));
+
+		do {
+
+			num3 = (int) (Math.random() * 26);
+
+		} while (num3 == num1 || num3 == num2 || author[num3].equals(author[index]));
+
+		if (placement == 0) {
+			System.out.println("\t1. " + author[index]);
+			System.out.println("\t2. " + author[num1]);
+			System.out.println("\t3. " + author[num2]);
+			System.out.println("\t4. " + author[num3]);
+		}
+		if (placement == 1) {
+			System.out.println("\t1. " + author[num1]);
+			System.out.println("\t2. " + author[index]);
+			System.out.println("\t3. " + author[num2]);
+			System.out.println("\t4. " + author[num3]);
+
+		}
+		if (placement == 2) {
+			System.out.println("\t1. " + author[num1]);
+			System.out.println("\t2. " + author[num2]);
+			System.out.println("\t3. " + author[index]);
+			System.out.println("\t4. " + author[num3]);
+
+		}
+		if (placement == 3) {
+			System.out.println("\t1. " + author[num1]);
+			System.out.println("\t2. " + author[num2]);
+			System.out.println("\t3. " + author[num3]);
+			System.out.println("\t4. " + author[index]);
+
+		}
+		System.out.println("\n\t5. Skip");
+		System.out.println("\t6. Exit");
+
+		System.out.print("\n");
+
+		System.out.print("Choice: ");
+
+		while (c != placement + 1) {
+
+			choice = in.nextLine();
+
+			if (choice.equalsIgnoreCase("5"))
+				break;
+			if (choice.equalsIgnoreCase("6")) {
+				tag = true;
+				break;
+			}
+			try {
+				c = Integer.parseInt(choice);
+			} catch (Exception e) {
+
+			}
+
+			if (c != placement + 1)
+				System.out.print("Try Again: ");
+
+		}
+
+		return 0;
+
+	}
+
+	public final void clearConsole() {
 
 		try {
 			final String os = System.getProperty("os.name");
