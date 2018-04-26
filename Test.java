@@ -20,7 +20,7 @@ public class Test {
 		author[7] = "Countee Cullen";
 		author[8] = "H.D. (Hilda Doolittle)";
 		author[9] = "William Carlos Williams";
-		author[10] = "Ezera Pound";
+		author[10] = "Ezra Pound";
 		author[11] = "Edna St. Vincent Millay";
 		author[12] = "Zora Neal Hurston";
 		author[13] = "William Faulkner";
