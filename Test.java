@@ -4,65 +4,65 @@ public class Test {
 
 	Scanner in = new Scanner(System.in);
 
-	String author[] = new String[26];
-	String work[] = new String[26];
+	String question[] = new String[26];
+	String answer[] = new String[26];
 	boolean tag = false;
 
 	Test() {
 
-		author[0] = "Booker T. Washington";
-		author[1] = "W. E. B. Du Bois";
-		author[2] = "Robert Frost";
-		author[3] = "Wallace Stevens";
-		author[4] = "T.S. Eliot";
-		author[5] = "Claude McKay";
-		author[6] = "Langston Hughs";
-		author[7] = "Countee Cullen";
-		author[8] = "H.D. (Hilda Doolittle)";
-		author[9] = "William Carlos Williams";
-		author[10] = "Ezra Pound";
-		author[11] = "Edna St. Vincent Millay";
-		author[12] = "Zora Neal Hurston";
-		author[13] = "William Faulkner";
-		author[14] = "Ernest Hemingway";
-		author[15] = "Flannery O'Connor";
-		author[16] = "Randall Jarrell";
-		author[17] = "Robert Lowell";
-		author[18] = "Gwendolyn Brooks";
-		author[19] = "Allen Ginsberg";
-		author[20] = "Tennessee Williams";
-		author[21] = "Denise Levertov";
-		author[22] = "Norman Mailer";
-		author[23] = "Adrienne Rich";
-		author[24] = "Joy Harjo";
-		author[25] = "Randall Kenan";
+		question[0] = "1";
+		question[1] = "2";
+		question[2] = "3";
+		question[3] = "4";
+		question[4] = "5";
+		question[5] = "6";
+		question[6] = "7";
+		question[7] = "8";
+		question[8] = "9";
+		question[9] = "10";
+		question[10] = "11";
+		question[11] = "12";
+		question[12] = "13";
+		question[13] = "14";
+		question[14] = "15";
+		question[15] = "16";
+		question[16] = "17";
+		question[17] = "18";
+		question[18] = "19";
+		question[19] = "20";
+		question[20] = "21";
+		question[21] = "22";
+		question[22] = "23";
+		question[23] = "24";
+		question[24] = "25";
+		question[25] = "26";
 
-		work[0] = "Up From Slavery";
-		work[1] = "The Souls of Black Folk";
-		work[2] = "Mending Wall__The Wood-Pile__After Apple Picking";
-		work[3] = "Sunday Morning__Thirteen Ways of Looking at a Blackbird";
-		work[4] = "The Love Song of J. Alfred Prufrock__The Wasteland__The Burial of the Dead";
-		work[5] = "If We Must Die__America";
-		work[6] = "The Negro Speaks of Rivers__Let America Be America Again";
-		work[7] = "Yet Do I Marvel";
-		work[8] = "Oread__Leda__Helen";
-		work[9] = "Spring and All__The Red Wheelbarrow__This Is Just to Say";
-		work[10] = "In a Station of the Metro__The River Merchant’s Wife: A Letter__A Few Don'ts ";
-		work[11] = "[I, being born a woman and distressed]__Spring__Apostrophe to Man";
-		work[12] = "The Gilded Six-Bits";
-		work[13] = "That Evening Sun";
-		work[14] = "The Short Happy Life of Francis Macomber";
-		work[15] = "Revelation";
-		work[16] = "The Death of the Ball Turret Gunner";
-		work[17] = "Memories of West Street and Lepke__For the Union Dead";
-		work[18] = "We Real Cool__Martin Luther King, Jr.";
-		work[19] = "Howl!";
-		work[20] = "Cat on a Hot Tin Roof";
-		work[21] = "In Mind__What Were They Like?";
-		work[22] = "The Armies of the Night";
-		work[23] = "Diving into the Wreck";
-		work[24] = "Eagle Poem__White Bear";
-		work[25] = "This Far";
+		answer[0] = "a1";
+		answer[1] = "a2";
+		answer[2] = "a3";
+		answer[3] = "a4";
+		answer[4] = "a5";
+		answer[5] = "a6";
+		answer[6] = "a7";
+		answer[7] = "a8";
+		answer[8] = "a9";
+		answer[9] = "a10";
+		answer[10] = "a11";
+		answer[11] = "a12";
+		answer[12] = "a13";
+		answer[13] = "a14";
+		answer[14] = "a15";
+		answer[15] = "a16";
+		answer[16] = "a17";
+		answer[17] = "a18";
+		answer[18] = "a19";
+		answer[19] = "a20";
+		answer[20] = "a21";
+		answer[21] = "a22";
+		answer[22] = "a23";
+		answer[23] = "a24";
+		answer[24] = "a25";
+		answer[25] = "a26";
 
 	}
 
@@ -100,14 +100,14 @@ public class Test {
 
 	void Start1() {
 
-		for (int i = 0; i < author.length; i++) {
+		for (int i = 0; i < question.length; i++) {
 
 			if (tag)
 				break;
 
 			clearConsole();
 
-			System.out.println(author[i] + "\n");
+			System.out.println(question[i] + "\n");
 
 			Shuffle1(i);
 
@@ -117,14 +117,14 @@ public class Test {
 
 	void Start2() {
 
-		for (int i = 0; i < work.length; i++) {
+		for (int i = 0; i < answer.length; i++) {
 
 			if (tag)
 				break;
 
 			clearConsole();
 
-			System.out.println(work[i] + "\n");
+			System.out.println(answer[i] + "\n");
 
 			Shuffle2(i);
 
@@ -146,45 +146,45 @@ public class Test {
 
 			num1 = (int) (Math.random() * 26);
 
-		} while (work[num1].equals(work[index]));
+		} while (answer[num1].equals(answer[index]));
 
 		do {
 
 			num2 = (int) (Math.random() * 26);
 
-		} while (num2 == num1 || work[num2].equals(work[index]));
+		} while (num2 == num1 || answer[num2].equals(answer[index]));
 
 		do {
 
 			num3 = (int) (Math.random() * 26);
 
-		} while (num3 == num1 || num3 == num2 || work[num3].equals(work[index]));
+		} while (num3 == num1 || num3 == num2 || answer[num3].equals(answer[index]));
 
 		if (placement == 0) {
-			System.out.println("\t1. " + work[index]);
-			System.out.println("\t2. " + work[num1]);
-			System.out.println("\t3. " + work[num2]);
-			System.out.println("\t4. " + work[num3]);
+			System.out.println("\t1. " + answer[index]);
+			System.out.println("\t2. " + answer[num1]);
+			System.out.println("\t3. " + answer[num2]);
+			System.out.println("\t4. " + answer[num3]);
 		}
 		if (placement == 1) {
-			System.out.println("\t1. " + work[num1]);
-			System.out.println("\t2. " + work[index]);
-			System.out.println("\t3. " + work[num2]);
-			System.out.println("\t4. " + work[num3]);
+			System.out.println("\t1. " + answer[num1]);
+			System.out.println("\t2. " + answer[index]);
+			System.out.println("\t3. " + answer[num2]);
+			System.out.println("\t4. " + answer[num3]);
 
 		}
 		if (placement == 2) {
-			System.out.println("\t1. " + work[num1]);
-			System.out.println("\t2. " + work[num2]);
-			System.out.println("\t3. " + work[index]);
-			System.out.println("\t4. " + work[num3]);
+			System.out.println("\t1. " + answer[num1]);
+			System.out.println("\t2. " + answer[num2]);
+			System.out.println("\t3. " + answer[index]);
+			System.out.println("\t4. " + answer[num3]);
 
 		}
 		if (placement == 3) {
-			System.out.println("\t1. " + work[num1]);
-			System.out.println("\t2. " + work[num2]);
-			System.out.println("\t3. " + work[num3]);
-			System.out.println("\t4. " + work[index]);
+			System.out.println("\t1. " + answer[num1]);
+			System.out.println("\t2. " + answer[num2]);
+			System.out.println("\t3. " + answer[num3]);
+			System.out.println("\t4. " + answer[index]);
 
 		}
 		System.out.println("\n\t5. Skip");
@@ -234,45 +234,45 @@ public class Test {
 
 			num1 = (int) (Math.random() * 26);
 
-		} while (author[num1].equals(author[index]));
+		} while (question[num1].equals(question[index]));
 
 		do {
 
 			num2 = (int) (Math.random() * 26);
 
-		} while (num2 == num1 || author[num2].equals(author[index]));
+		} while (num2 == num1 || question[num2].equals(question[index]));
 
 		do {
 
 			num3 = (int) (Math.random() * 26);
 
-		} while (num3 == num1 || num3 == num2 || author[num3].equals(author[index]));
+		} while (num3 == num1 || num3 == num2 || question[num3].equals(question[index]));
 
 		if (placement == 0) {
-			System.out.println("\t1. " + author[index]);
-			System.out.println("\t2. " + author[num1]);
-			System.out.println("\t3. " + author[num2]);
-			System.out.println("\t4. " + author[num3]);
+			System.out.println("\t1. " + question[index]);
+			System.out.println("\t2. " + question[num1]);
+			System.out.println("\t3. " + question[num2]);
+			System.out.println("\t4. " + question[num3]);
 		}
 		if (placement == 1) {
-			System.out.println("\t1. " + author[num1]);
-			System.out.println("\t2. " + author[index]);
-			System.out.println("\t3. " + author[num2]);
-			System.out.println("\t4. " + author[num3]);
+			System.out.println("\t1. " + question[num1]);
+			System.out.println("\t2. " + question[index]);
+			System.out.println("\t3. " + question[num2]);
+			System.out.println("\t4. " + question[num3]);
 
 		}
 		if (placement == 2) {
-			System.out.println("\t1. " + author[num1]);
-			System.out.println("\t2. " + author[num2]);
-			System.out.println("\t3. " + author[index]);
-			System.out.println("\t4. " + author[num3]);
+			System.out.println("\t1. " + question[num1]);
+			System.out.println("\t2. " + question[num2]);
+			System.out.println("\t3. " + question[index]);
+			System.out.println("\t4. " + question[num3]);
 
 		}
 		if (placement == 3) {
-			System.out.println("\t1. " + author[num1]);
-			System.out.println("\t2. " + author[num2]);
-			System.out.println("\t3. " + author[num3]);
-			System.out.println("\t4. " + author[index]);
+			System.out.println("\t1. " + question[num1]);
+			System.out.println("\t2. " + question[num2]);
+			System.out.println("\t3. " + question[num3]);
+			System.out.println("\t4. " + question[index]);
 
 		}
 		System.out.println("\n\t5. Skip");
