@@ -350,7 +350,7 @@ public class Test {
 
 			clearConsole();
 
-			System.out.println(question[i][i] + "\n");
+			System.out.println(question[i][0] + "\n");
 
 			Shuffle1(i);
 
@@ -371,26 +371,26 @@ public class Test {
 				
 		do {
 			num1 = (int) (Math.random() * 4 + 1);
-		}while(question[index][num1].equals(question[index][index + 1]));
+		}while(question[index][num1].equals(question[index][1]));
 				
 		do {
 			num2 = (int) (Math.random() * 4 + 1);
-		}while(question[index][num2].equals(question[index][index + 1]) || num2 == num1);
+		}while(question[index][num2].equals(question[index][1]) || num2 == num1);
 				
 		do {
 			num3 = (int) (Math.random() * 4 + 1);
-		}while(question[index][num3].equals(question[index][index + 1]) || num3 == num2 || num3 == num1);		
+		}while(question[index][num3].equals(question[index][1]) || num3 == num2 || num3 == num1);		
 		
 
 		if (placement == 1) {
-			System.out.println("\t1. " + question[index][index + 1]);
+			System.out.println("\t1. " + question[index][1]);
 			System.out.println("\t2. " + question[index][num1]);
 			System.out.println("\t3. " + question[index][num2]);
 			System.out.println("\t4. " + question[index][num3]);
 		}
 		if (placement == 2) {
 			System.out.println("\t1. " + question[index][num1]);
-			System.out.println("\t2. " + question[index][index + 1]);
+			System.out.println("\t2. " + question[index][1]);
 			System.out.println("\t3. " + question[index][num2]);
 			System.out.println("\t4. " + question[index][num3]);
 
@@ -398,7 +398,7 @@ public class Test {
 		if (placement == 3) {
 			System.out.println("\t1. " + question[index][num1]);
 			System.out.println("\t2. " + question[index][num2]);
-			System.out.println("\t3. " + question[index][index + 1]);
+			System.out.println("\t3. " + question[index][1]);
 			System.out.println("\t4. " + question[index][num3]);
 
 		}
@@ -406,7 +406,7 @@ public class Test {
 			System.out.println("\t1. " + question[index][num1]);
 			System.out.println("\t2. " + question[index][num2]);
 			System.out.println("\t3. " + question[index][num3]);
-			System.out.println("\t4. " + question[index][index + 1]);
+			System.out.println("\t4. " + question[index][1]);
 
 		}
 		System.out.println("\n\t5. Skip");
