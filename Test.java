@@ -4,65 +4,312 @@ public class Test {
 
 	Scanner in = new Scanner(System.in);
 
-	String question[] = new String[26];
-	String answer[] = new String[26];
+	String question[][] = new String[50][5];
+
 	boolean tag = false;
 
 	Test() {
 
-		question[0] = "1";
-		question[1] = "2";
-		question[2] = "3";
-		question[3] = "4";
-		question[4] = "5";
-		question[5] = "6";
-		question[6] = "7";
-		question[7] = "8";
-		question[8] = "9";
-		question[9] = "10";
-		question[10] = "11";
-		question[11] = "12";
-		question[12] = "13";
-		question[13] = "14";
-		question[14] = "15";
-		question[15] = "16";
-		question[16] = "17";
-		question[17] = "18";
-		question[18] = "19";
-		question[19] = "20";
-		question[20] = "21";
-		question[21] = "22";
-		question[22] = "23";
-		question[23] = "24";
-		question[24] = "25";
-		question[25] = "26";
+		question[0][0] = "";
+		question[0][1] = "";
+		question[0][2] = "";
+		question[0][3] = "";
+		question[0][4] = "";
+		
+		question[1][0] = "";
+		question[1][1] = "";
+		question[1][2] = "";
+		question[1][3] = "";
+		question[1][4] = "";
+		
+		question[2][0] = "";
+		question[2][1] = "";
+		question[2][2] = "";
+		question[2][3] = "";
+		question[2][4] = "";	
 
-		answer[0] = "a1";
-		answer[1] = "a2";
-		answer[2] = "a3";
-		answer[3] = "a4";
-		answer[4] = "a5";
-		answer[5] = "a6";
-		answer[6] = "a7";
-		answer[7] = "a8";
-		answer[8] = "a9";
-		answer[9] = "a10";
-		answer[10] = "a11";
-		answer[11] = "a12";
-		answer[12] = "a13";
-		answer[13] = "a14";
-		answer[14] = "a15";
-		answer[15] = "a16";
-		answer[16] = "a17";
-		answer[17] = "a18";
-		answer[18] = "a19";
-		answer[19] = "a20";
-		answer[20] = "a21";
-		answer[21] = "a22";
-		answer[22] = "a23";
-		answer[23] = "a24";
-		answer[24] = "a25";
-		answer[25] = "a26";
+		question[3][0] = "";
+		question[3][1] = "";
+		question[3][2] = "";
+		question[3][3] = "";
+		question[3][4] = "";
+		
+		question[4][0] = "";
+		question[4][1] = "";
+		question[4][2] = "";
+		question[4][3] = "";
+		question[4][4] = "";
+		
+		question[5][0] = "";
+		question[5][1] = "";
+		question[5][2] = "";
+		question[5][3] = "";
+		question[5][4] = "";
+		
+		question[6][0] = "";
+		question[6][1] = "";
+		question[6][2] = "";
+		question[6][3] = "";
+		question[6][4] = "";
+		
+		question[7][0] = "";
+		question[7][1] = "";
+		question[7][2] = "";
+		question[7][3] = "";
+		question[7][4] = "";
+		
+		question[8][0] = "";
+		question[8][1] = "";
+		question[8][2] = "";
+		question[8][3] = "";
+		question[8][4] = "";
+		
+		question[9][0] = "";
+		question[9][1] = "";
+		question[9][2] = "";
+		question[9][3] = "";
+		question[9][4] = "";
+		
+		question[10][0] = "";
+		question[10][1] = "";
+		question[10][2] = "";
+		question[10][3] = "";
+		question[10][4] = "";
+		
+		question[11][0] = "";
+		question[11][1] = "";
+		question[11][2] = "";
+		question[11][3] = "";
+		question[11][4] = "";
+		
+		question[12][0] = "";
+		question[12][1] = "";
+		question[12][2] = "";
+		question[12][3] = "";
+		question[12][4] = "";
+		
+		question[13][0] = "";
+		question[13][1] = "";
+		question[13][2] = "";
+		question[13][3] = "";
+		question[13][4] = "";
+		
+		question[14][0] = "";
+		question[14][1] = "";
+		question[14][2] = "";
+		question[14][3] = "";
+		question[14][4] = "";
+		
+		question[15][0] = "";
+		question[15][1] = "";
+		question[15][2] = "";
+		question[15][3] = "";
+		question[15][4] = "";
+		
+		question[16][0] = "";
+		question[16][1] = "";
+		question[16][2] = "";
+		question[16][3] = "";
+		question[16][4] = "";
+		
+		question[17][0] = "";
+		question[17][1] = "";
+		question[17][2] = "";
+		question[17][3] = "";
+		question[17][4] = "";
+		
+		question[18][0] = "";
+		question[18][1] = "";
+		question[18][2] = "";
+		question[18][3] = "";
+		question[18][4] = "";
+		
+		question[19][0] = "";
+		question[19][1] = "";
+		question[19][2] = "";
+		question[19][3] = "";
+		question[19][4] = "";
+		
+		question[20][0] = "";
+		question[20][1] = "";
+		question[20][2] = "";
+		question[20][3] = "";
+		question[20][4] = "";
+		
+		question[21][0] = "";
+		question[21][1] = "";
+		question[21][2] = "";
+		question[21][3] = "";
+		question[21][4] = "";
+		
+		question[22][0] = "";
+		question[22][1] = "";
+		question[22][2] = "";
+		question[22][3] = "";
+		question[22][4] = "";
+		
+		question[23][0] = "";
+		question[23][1] = "";
+		question[23][2] = "";
+		question[23][3] = "";
+		question[23][4] = "";
+		
+		question[24][0] = "";
+		question[24][1] = "";
+		question[24][2] = "";
+		question[24][3] = "";
+		question[24][4] = "";
+	
+		question[25][0] = "";
+		question[25][1] = "";
+		question[25][2] = "";
+		question[25][3] = "";
+		question[25][4] = "";
+		
+		question[26][0] = "";
+		question[26][1] = "";
+		question[26][2] = "";
+		question[26][3] = "";
+		question[26][4] = "";
+		
+		question[27][0] = "";
+		question[27][1] = "";
+		question[27][2] = "";
+		question[27][3] = "";
+		question[27][4] = "";
+		
+		question[28][0] = "";
+		question[28][1] = "";
+		question[28][2] = "";
+		question[28][3] = "";
+		question[28][4] = "";
+		
+		question[29][0] = "";
+		question[29][1] = "";
+		question[29][2] = "";
+		question[29][3] = "";
+		question[29][4] = "";
+		
+		question[30][0] = "";
+		question[30][1] = "";
+		question[30][2] = "";
+		question[30][3] = "";
+		question[30][4] = "";
+		
+		question[31][0] = "";
+		question[31][1] = "";
+		question[31][2] = "";
+		question[31][3] = "";
+		question[31][4] = "";
+		
+		question[32][0] = "";
+		question[32][1] = "";
+		question[32][2] = "";
+		question[32][3] = "";
+		question[32][4] = "";
+		
+		question[33][0] = "";
+		question[33][1] = "";
+		question[33][2] = "";
+		question[33][3] = "";
+		question[33][4] = "";
+		
+		question[34][0] = "";
+		question[34][1] = "";
+		question[34][2] = "";
+		question[34][3] = "";
+		question[34][4] = "";
+		
+		question[35][0] = "";
+		question[35][1] = "";
+		question[35][2] = "";
+		question[35][3] = "";
+		question[35][4] = "";
+		
+		question[36][0] = "";
+		question[36][1] = "";
+		question[36][2] = "";
+		question[36][3] = "";
+		question[36][4] = "";
+		
+		question[37][0] = "";
+		question[37][1] = "";
+		question[37][2] = "";
+		question[37][3] = "";
+		question[37][4] = "";
+		
+		question[38][0] = "";
+		question[38][1] = "";
+		question[38][2] = "";
+		question[38][3] = "";
+		question[38][4] = "";
+		
+		question[39][0] = "";
+		question[39][1] = "";
+		question[39][2] = "";
+		question[39][3] = "";
+		question[39][4] = "";
+		
+		question[40][0] = "";
+		question[40][1] = "";
+		question[40][2] = "";
+		question[40][3] = "";
+		question[40][4] = "";
+		
+		question[41][0] = "";
+		question[41][1] = "";
+		question[41][2] = "";
+		question[41][3] = "";
+		question[41][4] = "";
+		
+		question[42][0] = "";
+		question[42][1] = "";
+		question[42][2] = "";
+		question[42][3] = "";
+		question[42][4] = "";
+		
+		question[43][0] = "";
+		question[43][1] = "";
+		question[43][2] = "";
+		question[43][3] = "";
+		question[43][4] = "";
+		
+		question[44][0] = "";
+		question[44][1] = "";
+		question[44][2] = "";
+		question[44][3] = "";
+		question[44][4] = "";
+		
+		question[45][0] = "";
+		question[45][1] = "";
+		question[45][2] = "";
+		question[45][3] = "";
+		question[45][4] = "";
+		
+		question[46][0] = "";
+		question[46][1] = "";
+		question[46][2] = "";
+		question[46][3] = "";
+		question[46][4] = "";
+		
+		question[47][0] = "";
+		question[47][1] = "";
+		question[47][2] = "";
+		question[47][3] = "";
+		question[47][4] = "";
+		
+		question[48][0] = "";
+		question[48][1] = "";
+		question[48][2] = "";
+		question[48][3] = "";
+		question[48][4] = "";
+		
+		question[49][0] = "";
+		question[49][1] = "";
+		question[49][2] = "";
+		question[49][3] = "";
+		question[49][4] = "";
+		
 
 	}
 
@@ -73,7 +320,7 @@ public class Test {
 		while (true) {
 			test.tag = false;
 			test.clearConsole();
-			System.out.println("1. Test version 1\n2. Test version 2\n3. Exit");
+			System.out.println("1. Start Test\n2. Exit");
 			System.out.print("\nChoice: ");
 			String s = test.in.nextLine();
 			switch (s) {
@@ -83,10 +330,6 @@ public class Test {
 				s = "";
 				break;
 			case "2":
-				test.Start2();
-				s = "";
-				break;
-			case "3":
 				System.exit(0);
 				break;
 			default:
@@ -107,7 +350,7 @@ public class Test {
 
 			clearConsole();
 
-			System.out.println(question[i] + "\n");
+			System.out.println(question[i][i] + "\n");
 
 			Shuffle1(i);
 
@@ -115,22 +358,6 @@ public class Test {
 
 	}
 
-	void Start2() {
-
-		for (int i = 0; i < answer.length; i++) {
-
-			if (tag)
-				break;
-
-			clearConsole();
-
-			System.out.println(answer[i] + "\n");
-
-			Shuffle2(i);
-
-		}
-
-	}
 
 	int Shuffle1(int index) {
 
@@ -138,53 +365,48 @@ public class Test {
 
 		int placement;
 		String choice = "";
-		int c = 5;
+		int c = 6;
 
-		placement = (int) (Math.random() * 4);
-
+		placement = (int) (Math.random() * 4 + 1);
+				
 		do {
-
-			num1 = (int) (Math.random() * 26);
-
-		} while (answer[num1].equals(answer[index]));
-
+			num1 = (int) (Math.random() * 4 + 1);
+		}while(question[index][num1].equals(question[index][index + 1]));
+				
 		do {
-
-			num2 = (int) (Math.random() * 26);
-
-		} while (num2 == num1 || answer[num2].equals(answer[index]));
-
+			num2 = (int) (Math.random() * 4 + 1);
+		}while(question[index][num2].equals(question[index][index + 1]) || num2 == num1);
+				
 		do {
+			num3 = (int) (Math.random() * 4 + 1);
+		}while(question[index][num3].equals(question[index][index + 1]) || num3 == num2 || num3 == num1);		
+		
 
-			num3 = (int) (Math.random() * 26);
-
-		} while (num3 == num1 || num3 == num2 || answer[num3].equals(answer[index]));
-
-		if (placement == 0) {
-			System.out.println("\t1. " + answer[index]);
-			System.out.println("\t2. " + answer[num1]);
-			System.out.println("\t3. " + answer[num2]);
-			System.out.println("\t4. " + answer[num3]);
-		}
 		if (placement == 1) {
-			System.out.println("\t1. " + answer[num1]);
-			System.out.println("\t2. " + answer[index]);
-			System.out.println("\t3. " + answer[num2]);
-			System.out.println("\t4. " + answer[num3]);
-
+			System.out.println("\t1. " + question[index][index + 1]);
+			System.out.println("\t2. " + question[index][num1]);
+			System.out.println("\t3. " + question[index][num2]);
+			System.out.println("\t4. " + question[index][num3]);
 		}
 		if (placement == 2) {
-			System.out.println("\t1. " + answer[num1]);
-			System.out.println("\t2. " + answer[num2]);
-			System.out.println("\t3. " + answer[index]);
-			System.out.println("\t4. " + answer[num3]);
+			System.out.println("\t1. " + question[index][num1]);
+			System.out.println("\t2. " + question[index][index + 1]);
+			System.out.println("\t3. " + question[index][num2]);
+			System.out.println("\t4. " + question[index][num3]);
 
 		}
 		if (placement == 3) {
-			System.out.println("\t1. " + answer[num1]);
-			System.out.println("\t2. " + answer[num2]);
-			System.out.println("\t3. " + answer[num3]);
-			System.out.println("\t4. " + answer[index]);
+			System.out.println("\t1. " + question[index][num1]);
+			System.out.println("\t2. " + question[index][num2]);
+			System.out.println("\t3. " + question[index][index + 1]);
+			System.out.println("\t4. " + question[index][num3]);
+
+		}
+		if (placement == 4) {
+			System.out.println("\t1. " + question[index][num1]);
+			System.out.println("\t2. " + question[index][num2]);
+			System.out.println("\t3. " + question[index][num3]);
+			System.out.println("\t4. " + question[index][index + 1]);
 
 		}
 		System.out.println("\n\t5. Skip");
@@ -194,7 +416,7 @@ public class Test {
 
 		System.out.print("Choice: ");
 
-		while (c != placement + 1) {
+		while (c != placement) {
 
 			choice = in.nextLine();
 
@@ -211,94 +433,7 @@ public class Test {
 
 			}
 
-			if (c != placement + 1)
-				System.out.print("Try Again: ");
-
-		}
-
-		return 0;
-
-	}
-
-	int Shuffle2(int index) {
-
-		int num1 = 0, num2 = 0, num3 = 0;
-
-		int placement;
-		String choice = "";
-		int c = 5;
-
-		placement = (int) (Math.random() * 4);
-
-		do {
-
-			num1 = (int) (Math.random() * 26);
-
-		} while (question[num1].equals(question[index]));
-
-		do {
-
-			num2 = (int) (Math.random() * 26);
-
-		} while (num2 == num1 || question[num2].equals(question[index]));
-
-		do {
-
-			num3 = (int) (Math.random() * 26);
-
-		} while (num3 == num1 || num3 == num2 || question[num3].equals(question[index]));
-
-		if (placement == 0) {
-			System.out.println("\t1. " + question[index]);
-			System.out.println("\t2. " + question[num1]);
-			System.out.println("\t3. " + question[num2]);
-			System.out.println("\t4. " + question[num3]);
-		}
-		if (placement == 1) {
-			System.out.println("\t1. " + question[num1]);
-			System.out.println("\t2. " + question[index]);
-			System.out.println("\t3. " + question[num2]);
-			System.out.println("\t4. " + question[num3]);
-
-		}
-		if (placement == 2) {
-			System.out.println("\t1. " + question[num1]);
-			System.out.println("\t2. " + question[num2]);
-			System.out.println("\t3. " + question[index]);
-			System.out.println("\t4. " + question[num3]);
-
-		}
-		if (placement == 3) {
-			System.out.println("\t1. " + question[num1]);
-			System.out.println("\t2. " + question[num2]);
-			System.out.println("\t3. " + question[num3]);
-			System.out.println("\t4. " + question[index]);
-
-		}
-		System.out.println("\n\t5. Skip");
-		System.out.println("\t6. Exit");
-
-		System.out.print("\n");
-
-		System.out.print("Choice: ");
-
-		while (c != placement + 1) {
-
-			choice = in.nextLine();
-
-			if (choice.equalsIgnoreCase("5"))
-				break;
-			if (choice.equalsIgnoreCase("6")) {
-				tag = true;
-				break;
-			}
-			try {
-				c = Integer.parseInt(choice);
-			} catch (Exception e) {
-
-			}
-
-			if (c != placement + 1)
+			if (c != placement)
 				System.out.print("Try Again: ");
 
 		}
